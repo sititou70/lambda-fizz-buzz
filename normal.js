@@ -54,16 +54,7 @@ export const _fizzBuzz = (n) =>
 
 export const _seq = (proc1) => (proc2) => proc2;
 export const _printFizzBuzzList = (printNum) =>
-	_fix(
-		(loop) => (cnt) =>
-			_lessThan(cnt)(_succ(printNum))(
-				// cnt < printNum
-				() => _seq(console.log(_fizzBuzz(cnt)))(loop(_succ(cnt))),
-			)(
-				// cnt >= printNum
-				() => "done",
-			),
-	)(_one);
+	printNum((n) => _seq(console.log(_fizzBuzz(n)))(_succ(n)))(_one);
 
 // print fizz buzz list to 125 = 5 * 5 * 5
 _printFizzBuzzList(_mul(_mul(_five)(_five))(_five));
