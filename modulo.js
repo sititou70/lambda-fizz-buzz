@@ -6,7 +6,7 @@ export const _false = () => (fval) => fval;
 
 export const _and = (b1) => (b2) => b1(b2)(_false);
 
-// modulo arithmetic
+// modular arithmetic
 export const _zeroMod3 = (a0) => (a1) => (a2) => a0;
 export const _succMod3 = (n) => (a0) => (a1) => (a2) => n(a1)(a2)(a0);
 export const _isZeroMod3 = (n) => n(_true)(_false)(_false);
