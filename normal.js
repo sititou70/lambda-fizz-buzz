@@ -1,7 +1,6 @@
 export const _toNumber = (n) => n((x) => x + 1)(0);
 
 export const _zero = (s) => (z) => z;
-export const _one = (s) => (z) => s(z);
 export const _three = (s) => (z) => s(s(s(z)));
 export const _five = (s) => (z) => s(s(s(s(s(z)))));
 
@@ -52,6 +51,7 @@ export const _fizzBuzz = (n) =>
 			),
 	);
 
+export const _one = (s) => (z) => s(z);
 export const _seq = (proc1) => (proc2) => proc2;
 export const _printFizzBuzzList = (printNum) =>
 	printNum((n) => _seq(console.log(_fizzBuzz(n)))(_succ(n)))(_one);
