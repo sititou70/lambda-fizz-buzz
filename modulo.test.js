@@ -21,7 +21,7 @@ const toChurchNumber = (number) => (s) => (z) => {
 
 const toChurchBool = (bool) => (bool ? _true : _false);
 
-const toBool = (bool) => bool(() => true)(() => false);
+const toBool = (bool) => bool(true)(false);
 
 test.each`
 	a        | b        | expected
