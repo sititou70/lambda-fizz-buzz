@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node normal.js",
     "normal": "node normal.js",
-    "test": "vitest run"
+    "modulo": "node modulo.js",
+    "test": "vitest run",
+    "test:normal": "npm test normal.test.js",
+    "test:modulo": "npm test modulo.test.js"
   },
   "keywords": [],
   "author": "",
